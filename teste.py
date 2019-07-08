@@ -50,10 +50,8 @@ for operator in all_operators:
             current_prefix = prefix
     
     
-    #print(f'Operator: {operator[0]}')
+    
     if current_prefix != 0:
-        #print(f'The prefix: {current_prefix}')
-        #print(f'The value: ${operator[1][current_prefix]}')
         current_value = operator[1][current_prefix]
         operator_name = operator[0]
         prefixes_list.append((current_value, operator_name, current_prefix))
