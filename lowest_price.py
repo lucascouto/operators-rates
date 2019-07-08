@@ -1,3 +1,5 @@
+import sys
+
 def find_corresponding_prefixes(all_operators, phone_number):
 
     prefixes_list = list()

@@ -1,4 +1,3 @@
-import sys
 from lowest_price import *
 
 num_operators = int(input('How many operators do you want to register? '))
