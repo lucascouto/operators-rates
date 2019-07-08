@@ -20,16 +20,14 @@ for i in range(num_operators):
     all_operators.append((operator_name, rates_table))
     print("="*30)
 
-print(all_operators)
-
 
 phone_number = int(input('Enter the phone number to search the lowest rate: '))
 phone_number_digits = [int(digit) for digit in str(phone_number)]
 
 
 
-#FIND THE LOWEST RATE
-lowest_rate = sys.maxsize
+#FIND THE CORRESPONDING PREFIXES FOR THE GIVEN NUMBER
+prefixes_list = list()
 
 for operator in all_operators:
 
@@ -51,12 +49,30 @@ for operator in all_operators:
             max_prefix_length = len(prefix_digits)
             current_prefix = prefix
     
-    print(f'Operadora: {operator[0]}')
+    
+    #print(f'Operator: {operator[0]}')
     if current_prefix != 0:
-        print(f'O prefixo: {current_prefix}')
-        print(f'O valor: ${operator[1][current_prefix]}')
-    else:
-        print('Sem prefixo correspondente!')
+        #print(f'The prefix: {current_prefix}')
+        #print(f'The value: ${operator[1][current_prefix]}')
+        current_value = operator[1][current_prefix]
+        operator_name = operator[0]
+        prefixes_list.append((current_value, operator_name, current_prefix))
+    
+
+#FIND THE LOWEST RATE
+lowest_value = sys.maxsize
+
+for prefix in prefixes_list:
+    if(prefix[0] < lowest_value):
+        lowest_value = prefix[0]
+        lowest_name_operator = prefix[1]
+        lowest_prefix = prefix[2]
+
+print(f'\nThe operator that offers the lowest price for the number {phone_number} is Operator {lowest_name_operator}')
+print(f'Correspoding prefix: {lowest_prefix}')
+print(f'Value: ${lowest_value}')
+
+    
 
 
 
