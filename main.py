@@ -12,7 +12,7 @@ for i in range(num_operators):
     print()
     for j in range(operator_entries):
         prefix = int(input('Prefix: '))
-        value = float(input('Value: '))
+        value = float(input('Value($/min): '))
         rates_table[prefix] = value
         
         print()
@@ -21,7 +21,7 @@ for i in range(num_operators):
     print("="*30)
 
 
-phone_number = int(input('Enter the phone number to search the lowest rate: '))
+phone_number = int(input('Enter the phone number to search the lowest rate (just the digits): '))
 
 #FIND THE CORRESPONDING PREFIXES FOR THE GIVEN NUMBER
 corresponding_prefixes_list = find_corresponding_prefixes(all_operators, phone_number)
@@ -31,4 +31,4 @@ lowest_value = find_lowest_value(corresponding_prefixes_list)
 
 print(f'\nThe operator that offers the lowest price for the number {phone_number} is Operator {lowest_value["operator_name"]}')
 print(f'Correspoding prefix: {lowest_value["prefix"]}')
-print(f'Value: ${lowest_value["value"]}')
+print(f'Value: ${lowest_value["value"]}/min')
