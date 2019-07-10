@@ -24,10 +24,10 @@ for i in range(num_operators):
 phone_number = int(input('Enter the phone number to search the lowest rate: '))
 
 #FIND THE CORRESPONDING PREFIXES FOR THE GIVEN NUMBER
-prefixes_list = find_corresponding_prefixes(all_operators, phone_number)
+corresponding_prefixes_list = find_corresponding_prefixes(all_operators, phone_number)
 
 #FIND THE LOWEST RATE
-lowest_value = find_lowest_value(prefixes_list)
+lowest_value = find_lowest_value(corresponding_prefixes_list)
 
 print(f'\nThe operator that offers the lowest price for the number {phone_number} is Operator {lowest_value["operator_name"]}')
 print(f'Correspoding prefix: {lowest_value["prefix"]}')

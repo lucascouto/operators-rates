@@ -2,7 +2,7 @@ import sys
 
 def find_corresponding_prefixes(all_operators, phone_number):
 
-    prefixes_list = list()
+    corresponding_prefixes_list = list()
     phone_number_digits = [int(digit) for digit in str(phone_number)]
 
     for operator in all_operators:
@@ -29,15 +29,15 @@ def find_corresponding_prefixes(all_operators, phone_number):
         if corresponding_prefix != 0:
             corresponding_value = operator[1][corresponding_prefix]
             operator_name = operator[0]
-            prefixes_list.append((corresponding_value, operator_name, corresponding_prefix))
+            corresponding_prefixes_list.append((corresponding_value, operator_name, corresponding_prefix))
         
-    return prefixes_list
+    return corresponding_prefixes_list
     
 
-def find_lowest_value(prefixes_list):
+def find_lowest_value(corresponding_prefixes_list):
     lowest_value = sys.maxsize
 
-    for prefix in prefixes_list:
+    for prefix in corresponding_prefixes_list:
         if(prefix[0] < lowest_value):
             lowest_value = prefix[0]
             lowest_name_operator = prefix[1]
