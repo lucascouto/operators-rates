@@ -1,4 +1,4 @@
-# operators-rates
+# Operators Rates
 
 ## What this is about
 
@@ -82,3 +82,46 @@ If a price list does not include a certain prefix you cannot use that operator t
 
 This Python program can handle any number of price lists (operators) and then can calculate which operator that is cheapest for a certain number. Each price list can have thousands of entries.
 
+## How to run it
+
+  ### 1. To run this project, you need to install python 3
+  
+   #### 1.1. Linux
+   
+    $ sudo apt-get install python3.5
+    $ sudo apt-get install python-pip
+   
+   #### 1.2. Mac and Windows
+   
+   Download from the official website: https://www.python.org/downloads/
+
+  ### 2. Clone the repository to your computer and change to the project folder
+  
+    $ git clone https://github.com/lucascouto/operators-rates.git
+    $ cd operators-rates
+  
+  ### 3. Run the project
+  
+  Once you are inside the project folder, run the following command:
+    
+   #### 3.1. Windows
+   
+   `> py main.py`
+   
+   #### 3.2. Mac and Linux
+   
+   `$ python3 main.py`
+
+## How to run the tests
+
+In order to run the unit tests, you need to install pytest via pip:
+
+`$ pip install -U pytest`
+
+Once installed, run the following command to run all the tests (inside project folder):
+
+### 1. Mac and Linux
+`$ python3 -m pytest`
+
+### 2. Windows
+`$ py -m pytest`
