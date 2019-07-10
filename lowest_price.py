@@ -8,7 +8,7 @@ def find_corresponding_prefixes(all_operators, phone_number):
     for operator in all_operators:
 
         max_prefix_length = 0
-        current_prefix = 0
+        corresponding_prefix = 0
 
         for prefix in list(operator[1].keys()):
             
@@ -23,13 +23,13 @@ def find_corresponding_prefixes(all_operators, phone_number):
                 
             if is_valid_prefix and len(prefix_digits) > max_prefix_length:
                 max_prefix_length = len(prefix_digits)
-                current_prefix = prefix
+                corresponding_prefix = prefix
         
 
-        if current_prefix != 0:
-            current_value = operator[1][current_prefix]
+        if corresponding_prefix != 0:
+            corresponding_value = operator[1][corresponding_prefix]
             operator_name = operator[0]
-            prefixes_list.append((current_value, operator_name, current_prefix))
+            prefixes_list.append((corresponding_value, operator_name, corresponding_prefix))
         
     return prefixes_list
     
