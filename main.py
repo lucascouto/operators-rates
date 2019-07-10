@@ -1,4 +1,4 @@
-from lowest_price import *
+from lowest_price import find_corresponding_prefixes, find_lowest_value
 
 num_operators = int(input('How many operators do you want to register? '))
 print("="*30)
@@ -29,6 +29,6 @@ prefixes_list = find_corresponding_prefixes(all_operators, phone_number)
 #FIND THE LOWEST RATE
 lowest_value = find_lowest_value(prefixes_list)
 
-print(f'\nThe operator that offers the lowest price for the number {phone_number} is Operator {lowest_value[0]}')
-print(f'Correspoding prefix: {lowest_value[1]}')
-print(f'Value: ${lowest_value[2]}')
+print(f'\nThe operator that offers the lowest price for the number {phone_number} is Operator {lowest_value["operator_name"]}')
+print(f'Correspoding prefix: {lowest_value["prefix"]}')
+print(f'Value: ${lowest_value["value"]}')

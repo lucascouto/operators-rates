@@ -42,4 +42,4 @@ def find_lowest_value(prefixes_list):
             lowest_value = prefix[0]
             lowest_name_operator = prefix[1]
             lowest_prefix = prefix[2]
-    return lowest_name_operator, lowest_prefix, lowest_value
+    return {'operator_name':lowest_name_operator, 'prefix':lowest_prefix, 'value':lowest_value}
