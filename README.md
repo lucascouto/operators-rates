@@ -1,4 +1,4 @@
-# Operators Rates
+# Operators Prices
 
 ## What this is about
 
@@ -10,7 +10,7 @@
     </tr>
     <tr>
       <td><strong>Prefix</strong></td>
-      <td><strong>Rate ($/min)</strong></td>
+      <td><strong>Price ($/min)</strong></td>
     </tr>
     <tr>
       <td>1</td>
@@ -52,7 +52,7 @@
     </tr>
     <tr>
       <td><strong>Prefix</strong></td>
-      <td><strong>Rate ($/min)</strong></td>
+      <td><strong>Price ($/min)</strong></td>
     </tr>
     <tr>
       <td>1</td>
