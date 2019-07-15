@@ -6,18 +6,18 @@ print("="*30)
 all_operators = list()
 
 for i in range(num_operators):
-    rates_table = dict()
+    prices_table = dict()
     operator_name = input(f'Name of operator {i+1}: ')
     operator_entries = int(input(f'How many entries for {operator_name}? '))
     print()
     for j in range(operator_entries):
         prefix = int(input('Prefix: '))
         value = float(input('Value($/min): '))
-        rates_table[prefix] = value
+        prices_table[prefix] = value
         
         print()
-    print(f'Rates table for {operator_name}: {rates_table}')
-    all_operators.append((operator_name, rates_table))
+    print(f'Prices table for operator {operator_name}: {prices_table}')
+    all_operators.append((operator_name, prices_table))
     print("="*30)
 
 
